@@ -5,7 +5,7 @@
 
 x = float(input("Enter value for x: "))
 
-y = 1 / (1 / (x + 1) + 1 / (x + 1) + (x + 1/x))
+y = 1 / (x + 1) / (x + 1) / (x + 1 / x)
 print("y =", y)
 
-# still don't know the answer, need to be solved!
+# still don't know the answer, need to be solved
