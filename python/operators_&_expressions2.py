@@ -11,9 +11,9 @@
 
 # scenario 2
 hour = int(input('Starting time (hours): '))
-minutes = int(input('Starting time (minutes): '))
+mins = int(input('Starting time (minutes): '))
 duration = int(input('Event duration (minutes): '))
 
-end_minutes = duration % 60
-end_hour = hour 
-print(end_hour,':',end_minutes)
+rem_mins = duration % 60
+end_hour = hour + (mins - rem_mins) / 60
+print(end_hour,':',end_mins)
