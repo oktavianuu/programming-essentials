@@ -16,4 +16,6 @@ duration = int(input('Event duration (minutes): '))
 
 rem_mins = duration % 60
 end_hour = hour + (mins - rem_mins) / 60
+total_mins = rem_mins + mins
+end_mins = total_mins % 60
 print(end_hour,':',end_mins)
