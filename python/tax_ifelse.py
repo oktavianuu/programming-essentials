@@ -5,8 +5,7 @@ if income < 85528:
     if tax < 0:
         tax = 0.0
 else:
-    tax_amount = income - 85528
-    tax = 14839.02 + 0.32 * tax_amount
+    tax = 14839.02 + 0.32 * (income - 85528)
 
 tax = round(tax, 0)
 print("The tax is", tax, "thalers.")
