@@ -11,9 +11,15 @@ print(
 +==================================+
 """
 )
-guess_number = int(input("Type the secret number: "))
+#guess_number = int(input("Type the secret number: "))
+#while guess_number != secret_number:
+#       print("Ha ha! You're stuck in my loop!")
+#        guess_number = int(input("Type the secret number: "))
+#        if guess_number == secret_number:
+#            print("Well done, muggle! You are free now.")
+
+guess_number = int(input("What is the secret number?"))
 while guess_number != secret_number:
-        print("Ha ha! You're stuck in my loop!")
-        guess_number = int(input("Type the secret number: "))
-        if guess_number == secret_number:
-            print("Well done, muggle! You are free now.")
+    print("Ha ha! You're stuck in my loop!")
+    guess_number = int(input("Type the secret number: "))
+print("Well done, muggle! You are free now.")
