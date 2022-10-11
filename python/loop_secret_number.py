@@ -18,6 +18,8 @@ print(
 #        if guess_number == secret_number:
 #            print("Well done, muggle! You are free now.")
 
+# more compact solution
+
 guess_number = int(input("What is the secret number?"))
 while guess_number != secret_number:
     print("Ha ha! You're stuck in my loop!")
