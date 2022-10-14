@@ -4,7 +4,6 @@ word_entered = input("Enter a word: ")
 user_word = word_entered.upper()
 
 for letter in user_word:
-
     if letter == "A":
         continue
     if letter == "I":
@@ -15,4 +14,8 @@ for letter in user_word:
         continue
     if letter == "O":
         continue
-print(word_without_vowels)
+    else:
+        word_without_vowels += letter
+        
+for letter in word_without_vowels:
+    print(letter)
