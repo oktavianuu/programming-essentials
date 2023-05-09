@@ -1,4 +1,8 @@
-dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+dictionary = {
+    "cat": "chat", 
+    "dog": "chien", 
+    "horse": "cheval"
+    }
 
 # checking words in dictionary by check its key
 words = ['cat', 'dog', 'horse', 'lion']
