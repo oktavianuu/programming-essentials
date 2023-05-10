@@ -20,3 +20,5 @@ for english, french in dictionary.items():
 print("values() method")
 for french in dictionary.values():
     print(french)
+
+# modifying and adding values
