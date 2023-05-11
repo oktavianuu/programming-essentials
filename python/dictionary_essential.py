@@ -95,5 +95,15 @@ pol_eng_dictionary = {
     }
 copied_dictionary = pol_eng_dictionary.copy()
 
- 
+# glue two dictionary together
+d1 = {'Adam Smith': 'A', 'Judy Paxton': 'B+'}
+d2 = {'Mary Louis': 'A', 'Patrick White': 'C'}
+d3 = {}
 
+for item in (d1, d2):
+    d3.update(item)
+print(d3)
+
+# convert tuple to dictionary
+colors = (("green", "#008000"), ("blue", "#0000FF"))
+dic = dict(colors)
