@@ -1,5 +1,6 @@
-def hello(name):
-    print("hello", name, "!")
+def intro(first_name, llast_name):
+    print("hello my name is", first_name, llast_name + "!")
 
-name = input("What is your call  name: ")
-hello(name)
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+intro(first_name, last_name)
