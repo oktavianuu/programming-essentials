@@ -1,3 +1,5 @@
+# function arguments are dictated by its positions
+
 def intro(first_name, llast_name):
     print("hello my name is", first_name, llast_name + "!")
 
