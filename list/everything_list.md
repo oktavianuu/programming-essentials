@@ -20,5 +20,23 @@ We can also modify list by using its index and square brackets like so:
 ```python
 numbers[0] = 150 # replace the first element by 150.
 numbers[-1] = 200 # replace the last element of the list by 200.
-numbers[1] = numbers[3] #
+numbers[1] = numbers[3] # copying element at index 3 to elelemnt at index 1 in list "numbers"
 ```
+NOTE: we may use  ```len()``` function to check how many element inside a list. 
+
+### Removing Element From a List
+We can remove an element from a list using an instruction. The instruction is called ```del``` as follow:
+```python
+del numbers[2]
+```
+The expression above remove element at index 2 from the list. It is important to rememeber that we can't access an element that doen't exist. So it is crucial to know that we cannot access element outside a range of the list. Look at the example below:
+```python
+print(numbers[5])
+```
+The expression above will cause an error.
+Another way to access element from a list is by using negative indices. look at the example below:
+```python
+numbers[-1] # select the very last element of the list numbers
+numbers[-2] # select the one before the last one
+```
+
