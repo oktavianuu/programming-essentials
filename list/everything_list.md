@@ -40,3 +40,18 @@ numbers[-1] # select the very last element of the list numbers
 numbers[-2] # select the one before the last one
 ```
 
+### Function vs Method
+A method is specific kind of function; it behaves like a function and looks like a function, but diffes in the way in which it acts, and in its invocation style.
+
+A **function** does not belong to any data ~ it gets data, it may create data and it (generally) produces a result. A __method__ does all these things, but is also able to change the state of a selected entity. 
+NOTE: __A methodis owned by the data it works for, while a function is owned by the whole code__.
+The following code is a clear example of how to use method and function.
+__Function:__
+```python
+result = function(arg)
+```
+A function takes an argument, does something, and returns a result.
+__Method:__
+```python
+result = data.method(arg)
+```
