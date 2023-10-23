@@ -55,3 +55,9 @@ __Method:__
 ```python
 result = data.method(arg)
 ```
+The method will behave like a function, but can do something more - it can change the internal state of the data from which it has been invoked.
+
+You may ask: why are we talking about methods, not about lists?
+
+This is an essential issue right now, as we're going to show you how to add new elements to an existing list. This can be done with methods owned by all the lists, not by functions.
+
