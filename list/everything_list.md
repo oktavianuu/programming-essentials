@@ -78,7 +78,9 @@ You may ask: why are we talking about methods, not about lists?
 This is an essential issue right now, as we're going to show you how to add new elements to an existing list. This can be done with methods owned by all the lists, not by functions.
 
 ### Important List Operations Concept
-* If we have list ```L1```, then the following assignment: ```L2 = L1``` does not make copy of L1 but makes the variables L1 and L2 point to one and the same list in computer memory. For example:
+
+* If we have list ``L1``, then the following assignment: ``L2 = L1`` does not make copy of L1 but makes the variables L1 and L2 point to one and the same list in computer memory. For example:
+
 ```python
 > vehicles_one = ['car', 'bicycle', 'motor']
 > print(vehicles_one) 
@@ -89,17 +91,72 @@ This is an essential issue right now, as we're going to show you how to add new 
 > print(vehicles_two)
 > outputs: ['bicycle', 'motor']
 ```
+
 * If we want to copy a list, me can do it by performing slice on that list, for example:
+
 ```python
 > colors = ['red', 'green', 'orange']
 
 > whole_colors = colors[:] # copying whole colors
 > part_colors = colors[:2] #copying two first elements 
 ```
+
 * We can use negative indices to perform slicing too:
+
 ```python
 > sample_list = ["A", "B", "C", "D", "E"]
 > new_list = sample_list[2:-1] # slice 'C' and 'D' and copied it to new_list
 > print(new_list)
 > outputs: ['C', 'D']
 ```
+
+* The general rule for slicing a list as is ``list[start:end]``, with ``start`` and ``end`` are indices. They're optional; if we want to copy all list content, we don't have to specify the indices just use the ``:``.
+* We can delete list or content of the list using ``del`` instruction:
+
+```python
+> my_list = [1, 2, 3, 4, 5]
+> del my_list[0:2]
+> print(my_list)  # outputs: [3, 4, 5]
+
+> del my_list[:]
+> print(my_list)  # deletes the list content, 
+> outputs: []
+```
+
+* We can test if some items exist in a list or not using the ``in`` and ``not in`` keywords:
+
+```python
+> my_list = ["A", "B", 1, 2]
+> "A" in my_list
+> outputs: True
+> "C" not in my_list
+> outputs: True
+> 2 not in my_list
+> False
+```
+
+### Lists in list
+
+Lists can contain variety of data types including scalars and non-scalar value such as string, boolean or even more complex structure such as list itself.
+Sometimes, we want to use list as element in our list. We often find such arrays in our daily lives, the simple example is chessboard.
+A chessboard composed of rows and columns, there are eight rows and eight columns. Each column is marked with the letters A through H. Each line is marked with a number from one to eight. Each line is marked with a number from 1 to 8.
+The location of each filed is identified by letter-digits pairs. Thus we know that the bottom left corner of the board (the one with white rook) is A1, while the opposite corner is H8.
+
+If we assume that we're able to use the selected numbers to represent any chess piece. We can also assume that every row on the cheesboard is a list.
+Look at the code below:
+```python
+> row = []
+for i in range(8):
+    row.append(WHITE_PAWN)
+```
+It builds a list containing eight elements representing the second row of the chessboard - the one filled with pawns (assume that WHITE_PAWN is a predefined symbol representing a white pawn).
+
+The same effect may be achieved by means of a list comprehension, the special syntax used by Python in order to fill massive lists.
+
+A list comprehension is actually a list, but created on-the-fly during program execution, and is not described statically.
+
+Take a look at the snippet:
+```python
+row = [WHITE_PAWN for i in range(8)]
+```
+
