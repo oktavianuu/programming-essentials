@@ -159,4 +159,31 @@ Take a look at the snippet:
 ```python
 row = [WHITE_PAWN for i in range(8)]
 ```
+The part of the code placed inside the brackets specify:
+* the data to be used to fill the list (WHITE_PAWN)
+* the clause specifying how many the data occurs inside the list ```(for i in range(8))```
 
+Lets take a closer look to the following example:
+```python
+sq = [x ** 2 for x in range(1, 11)]
+```
+The above code will generate a list with 10 elements. Here is how the list generated:
+* ```range(1, 11)``` creates an iterable that yields numebers from 1 to 10. It generates the sequence 1, 2, 3, 4, 5, 6, 7, 8, 9,10. 
+* The list comprehension is enclosed in square brackets ```[...]``` which indicates that it will produce list.
+* ```x``` is the variable that represent each element of the iterable (in this case, the number from 1 to 10) as the list comprehension iterates over them. 
+* ```x ** 2``` calculates the square of the current value of ```x```.
+* The entire list comprehension is wrapped in aquare brackets ```[...]```, which collects all the square values into a list. 
+* it will produce the following elements:
+```[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]``` and is assigned to the sq variable. 
+
+### Lists in lists: two-dimensional arrays
+We assume that ```EMPTY``` is a predefined symbol designates an empty field on the cheessboard. So, if we want to create a list of lists representing the whole chessboard, it may be done in the following way:
+```python
+board = []
+
+for i in range(8):
+    row = [EMPTY for i in range(8)]
+    board.append(row)
+```
+Explanation:
+* the inner part of the loop 
