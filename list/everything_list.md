@@ -144,11 +144,13 @@ The location of each filed is identified by letter-digits pairs. Thus we know th
 
 If we assume that we're able to use the selected numbers to represent any chess piece. We can also assume that every row on the cheesboard is a list.
 Look at the code below:
+
 ```python
 > row = []
 for i in range(8):
     row.append(WHITE_PAWN)
 ```
+
 It builds a list containing eight elements representing the second row of the chessboard - the one filled with pawns (assume that WHITE_PAWN is a predefined symbol representing a white pawn).
 
 The same effect may be achieved by means of a list comprehension, the special syntax used by Python in order to fill massive lists.
@@ -156,28 +158,36 @@ The same effect may be achieved by means of a list comprehension, the special sy
 A list comprehension is actually a list, but created on-the-fly during program execution, and is not described statically.
 
 Take a look at the snippet:
+
 ```python
 row = [WHITE_PAWN for i in range(8)]
 ```
+
 The part of the code placed inside the brackets specify:
+
 * the data to be used to fill the list (WHITE_PAWN)
-* the clause specifying how many the data occurs inside the list ```(for i in range(8))```
+* the clause specifying how many the data occurs inside the list ``(for i in range(8))``
 
 Lets take a closer look to the following example:
+
 ```python
 sq = [x ** 2 for x in range(1, 11)]
 ```
+
 The above code will generate a list with 10 elements. Here is how the list generated:
-* ```range(1, 11)``` creates an iterable that yields numebers from 1 to 10. It generates the sequence 1, 2, 3, 4, 5, 6, 7, 8, 9,10. 
-* The list comprehension is enclosed in square brackets ```[...]``` which indicates that it will produce list.
-* ```x``` is the variable that represent each element of the iterable (in this case, the number from 1 to 10) as the list comprehension iterates over them. 
-* ```x ** 2``` calculates the square of the current value of ```x```.
-* The entire list comprehension is wrapped in aquare brackets ```[...]```, which collects all the square values into a list. 
+
+* ``range(1, 11)`` creates an iterable that yields numebers from 1 to 10. It generates the sequence 1, 2, 3, 4, 5, 6, 7, 8, 9,10.
+* The list comprehension is enclosed in square brackets ``[...]`` which indicates that it will produce list.
+* ``x`` is the variable that represent each element of the iterable (in this case, the number from 1 to 10) as the list comprehension iterates over them.
+* ``x ** 2`` calculates the square of the current value of ``x``.
+* The entire list comprehension is wrapped in aquare brackets ``[...]``, which collects all the square values into a list.
 * it will produce the following elements:
-```[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]``` and is assigned to the sq variable. 
+  ``[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]`` and is assigned to the sq variable.
 
 ### Lists in lists: two-dimensional arrays
-We assume that ```EMPTY``` is a predefined symbol designates an empty field on the cheessboard. So, if we want to create a list of lists representing the whole chessboard, it may be done in the following way:
+
+We assume that ``EMPTY`` is a predefined symbol designates an empty field on the cheessboard. So, if we want to create a list of lists representing the whole chessboard, it may be done in the following way:
+
 ```python
 board = []
 
@@ -185,21 +195,24 @@ for i in range(8):
     row = [EMPTY for i in range(8)]
     board.append(row)
 ```
+
 Explanation:
+
 * the inner part of the loop creates a row consisting of eight elements (each of them equal to EMPTY) and appends it to the board list;
 * the outer part repeats it eight times;
-* in total, the ```board``` list consists of 64 elements (all equal to ```EMPTY```)
+* in total, the ``board`` list consists of 64 elements (all equal to ``EMPTY``)
 
 This model perfectly mimics the real chessboard, which in fact an eight-element list of elements, all being single rows. Here is the summary of our observation:
-* the elements of the rows are field, eight of them per row;
-* the elements of the chessboard are rows, eight of them per chessboard. 
 
-The ```board``` variable is now **two-dimensional array**. In algebra, that is what we call **matrix**.
+* the elements of the rows are field, eight of them per row;
+* the elements of the chessboard are rows, eight of them per chessboard.
+
+The ``board`` variable is now **two-dimensional array**. In algebra, that is what we call **matrix**.
 
 A list comprehensions can also be nested, we can shorten the board creation in the following way:
+
 ```python
 board = [[EMPTY for i in range(8)] for j in range(8)]
 ```
-The inner part creates a row, and the outer part builds a list of row.
 
-
+The inner part creates a row, and the outer part builds a list of row. The application of chessboard can be found here [chessboard](chessboard.py).
