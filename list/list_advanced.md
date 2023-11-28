@@ -33,4 +33,23 @@ average = total/31
 
 print("Average temperature at noon: ", average)
 ```
+NOTE: the ```day``` variable used by the ```for``` loop is not a scalar - each pass through the ```temps``` matrix assigns with with subsequent rows of the matrix; it's a list. it has to be indexed with ```11``` to access the temperature value measured at noon.
 
+Now find the highest temperature during the whole month - see the code:
+```python
+temps = [[0.0 for h in range(24)] for d in range(31)]
+#
+#
+#
+
+highest = -100.0
+
+for day in temps:
+    for temp in day:
+        if temp > highest:
+            highest = temp
+
+print("The highest temperature was: ", highest)
+```
+NOTE: 
+*
