@@ -9,4 +9,7 @@ b = float(input("Enter the second side\'s length: "))
 c = float(input("Enter the third side\'s length: "))
 
 result = is_a_triangle(a, b, c)
-print(result)
+if result:
+    print("Yes, it can be a triangle.")
+else:
+    print('No, it can be a triangle.')
