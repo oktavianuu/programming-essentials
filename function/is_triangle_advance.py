@@ -13,3 +13,13 @@ if result:
     print("Yes, it can be a triangle.")
 else:
     print('No, it can be a triangle.')
+
+# The hypotenuse is the longest side
+def is_a_right_triangle(a, b, c):
+    if not is_a_triangle:
+        return False
+    if c > a and c > b:
+        return c ** 2 == a ** 2 + b ** 2
+    if a > b and a > c:
+        return a ** 2 == b ** 2 + c ** 2
+    
