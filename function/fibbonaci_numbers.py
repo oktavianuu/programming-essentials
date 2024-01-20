@@ -16,8 +16,8 @@ def fib(n):
 
     for i in range(3, n + 1):
         the_sum = elem_1 + elem_2 # the next number is the sum of the two preceding numbers
-        elem_1, elem_2 = elem_2, the_sum # 
-    return the_sum
+        elem_1, elem_2 = elem_2, the_sum # move the elem_1 and elem_2 
+    return the_sum # variables through the subsequent Fibonacci numbers.
 
 # testing
 for n in range(1, 10):
