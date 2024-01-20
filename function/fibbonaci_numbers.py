@@ -13,5 +13,5 @@ def fib(n):
     return the_sum
 
 # testing
-for i in range(1, 10):
+for n in range(1, 10):
     print(n, "->", fib(n))
