@@ -15,3 +15,6 @@ This is how:
 empty_tuple = ()
 ```
 When we create tuple, we need parenthesis. It is important to remember that forgetting commas won't spoil the program, instead, we will get two single variables, not tuple.
+
+#### How to use tuple?
+
