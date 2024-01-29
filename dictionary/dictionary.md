@@ -55,4 +55,6 @@ phone_numbers = {'boss': 5551234567
 ```
 The kind of formatting above is called hanging indent.
 
-
+#### How to use a dictionary: The ```keys()```
+Can dictionaries be browsed using for loop, like lists or tuples?
+No and Yes
