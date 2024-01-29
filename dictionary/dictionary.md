@@ -39,3 +39,20 @@ for word in words:
     else:
         print(word, "is not in dictionary.")
 ```
+NOTE: it is important to remember that when we write a big or lengthy expression, it might be a good idea to keep it verticlly aligned:
+```python
+# example 1:
+dictionary = {
+                "cat": "chat",
+                "dog": "chien",
+                "horse": "cheval"
+            }
+
+# example 2
+phone_numbers = {'boss': 5551234567
+                 'Suzy': 22657854310
+                }
+```
+The kind of formatting above is called hanging indent.
+
+
