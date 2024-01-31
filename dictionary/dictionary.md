@@ -56,7 +56,21 @@ phone_numbers = {'boss': 5551234567
 The kind of formatting above is called hanging indent.
 
 #### Modifying and adding new ```key```
+##### Modifying ```key```
 dictionary is fully mutable so there will be no obstacle to modifying them.
+```python
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+dictionary['cat'] = 'minou'
+print(dictionary)
+```
+In the code above, we will replace "chat" with "minou".
+Output:
+```
+{'cat': 'minou', 'dog': 'chien', 'horse': 'cheval'}
+```
+##### Adding new ```key```
+
 
 #### How to use a dictionary: The ```keys()```
 Can dictionaries be browsed using for loop, like lists or tuples?
