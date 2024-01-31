@@ -55,6 +55,9 @@ phone_numbers = {'boss': 5551234567
 ```
 The kind of formatting above is called hanging indent.
 
+#### Modifying and adding new ```key```
+dictionary is fully mutable so there will be no obstacle to modifying them.
+
 #### How to use a dictionary: The ```keys()```
 Can dictionaries be browsed using for loop, like lists or tuples?
 No and Yes
