@@ -70,7 +70,48 @@ Output:
 {'cat': 'minou', 'dog': 'chien', 'horse': 'cheval'}
 ```
 ##### Adding new ```key```
+Adding a new key-value pair to a dictionary is as simple as changing a value - we only have to assign a value to a new, previously non-existent key.
 
+Note: this is very different behavior compared to lists, which don't allow you to assign values to non-existing indices.
+```python
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+dictionary['swan'] = 'cygne'
+print(dictionary)
+```
+output:
+```
+{'cat': 'chat', 'dog': 'chien', 'horse': 'cheval', 'swan': 'cygne'}
+```
+EXTRA:
+we can also insert an item to a dictionary by using the update() method, e.g.:
+```python
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+dictionary.update({"duck": "canard"})
+print(dictionary)
+```
+
+#### Removing ```key```
+Note: removing a key will always cause the removal of the associated value. Values cannot exist without their keys. This is done with the del instruction.
+```python
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+del dictionary['dog']
+print(dictionary)
+```
+output:
+```
+{'cat': 'chat', 'horse': 'cheval'}
+```
+EXTRA:
+To remove the last item in a dictionary, you can use the popitem() method:
+```python
+dictionary = {"cat": "chat", "dog": "chien", "horse": "cheval"}
+
+dictionary.popitem()
+print(dictionary)    # outputs: {'cat': 'chat', 'dog': 'chien'}
+```
 
 #### How to use a dictionary: The ```keys()```
 Can dictionaries be browsed using for loop, like lists or tuples?
