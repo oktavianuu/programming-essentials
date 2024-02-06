@@ -11,14 +11,17 @@ while True: # infinite loop as long as the condition is true
 
     if name in school_class: # if the name of the student is already in the dictionary
         school_class[name] += (score, ) # lengthen the associated tuple with the new score (the "+=" operator)
-    else:                   # if this is a new student (unknown to the dict), create a new entry
-        school_class[name] = (score, )
+    else:                   # if this is a new student (unknown to the dict),
+        school_class[name] = (score, ) # create a new entry, its value is a one-element tuple containing the entered score
     
-for name in sorted(school_class.keys()):
-    adding = 0
-    counter = 0
+for name in sorted(school_class.keys()): # iterate through the 
+    adding = 0 # initialize the data needed to evaluate the average sum 
+    counter = 0 # nitialize the data needed to evaluate the average counter
+
+    # iterate through the tuple, taking all the subsequent scores and updating the sum, together with the counter;
     for score in school_class[name]:
         adding += score
         counter += 1
+    # evaluate and print the student's name and average score.
     print(name, ":", adding/counter)
                 
