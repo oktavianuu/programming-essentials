@@ -26,6 +26,50 @@ print(duplicates) # # outputs: 4
 
 4. Write a program that will "glue" the two dictionaries (```d1``` and ```d2```) together and create a new one (```d3```).
 ```python
+d1 = {'Adam Smith': 'A', 'Judy Paxton': 'B+'}
+d2 = {'Mary Louis': 'A', 'Patrick White': 'C'}
+d3 = {}
 
 
+for item in (d1, d2):
+    d3 = {**d1, **d2} # tuple inpacking
+```
+5. Write a program that will convert the ```my_list``` list to a tuple.
+```python
+my_list = ["car", "Ford", "flower", "Tulip"]
+
+t = tuple(my_list)
+```
+6. Write a program that will convert the colors ```tuple``` to a dictionary.
+```python
+colors = (("green", "#008000"), ("blue", "#0000FF"))
+```
+7. What will happen when you run the following code?
+```python
+my_dictionary = {"A": 1, "B": 2}
+copy_my_dictionary = my_dictionary.copy()
+my_dictionary.clear()
+
+print(copy_my_dictionary)
+
+# This program will output {'A': 1, 'B': 2} to the screen
+```
+8. What is the output of the following program?
+```python
+colors = {
+    "white": (255, 255, 255),
+    "grey": (128, 128, 128),
+    "red": (255, 0, 0),
+    "green": (0, 128, 0)
+    }
+
+for col, rgb in colors.items():
+    print(col, ":", rgb)
+```
+The program will print the following:
+```
+white : (255, 255, 255)
+grey : (128, 128, 128)
+red : (255, 0, 0)
+green : (0, 128, 0)
 ```
