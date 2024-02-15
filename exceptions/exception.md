@@ -14,3 +14,16 @@ We can see two branches here:
 
 As we can see, this approach accepts errors (treats them as a normal part of the program's life) instead of escalating efforts to avoid errors at all.
 
+#### The exceptopn proves the rule
+Look at the following code:
+```python
+try:
+    value = int(input('Enter a natural number: '))
+    print('The reciprocal of', value, 'is', 1/value)        
+except:
+    print('I do not know what to do.')
+```
+let us summarize:
+* Any part of the code placed between ```try``` and ```except```is executed in a very special way, any error which occurs here won't terminate program execution. Instead, the control will immediately jump to the first line situated after the ```except``` keyword, and no other part of the ```try``` branch is executed.
+* the code inside the ```except``` branch is activated only only when exception has been encountered inside the ```try``` block. There is no way to get there by any other means.
+* whether either the ```try``` block or the ```except```block is executed successfully, the control returns to the normal path of execution, and any code located beyond in the source file is executed as if nothing happened.
