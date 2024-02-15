@@ -66,4 +66,4 @@ except:
     print('Something strange has happened here... Sorry!')
 ```
 We've added third except branch, but this time it has no exception name specified - we can say it's anonymous or (what is closer to its actual role) it's the **default**. We can expect that when an exception is raised and there is no ```except``` branch dedicated to this exception, it will be handled by the default branch.
-NOTE: the 
+NOTE: The default ```except``` branch must be the last ```except``` branch. Always! 
